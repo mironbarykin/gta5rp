@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "gta5rp/judiciary"
+version = "0.1.0"
+description = "A Django web application for creating and publishing documents in the judiciary."
+authors = ["Miron Barykin <barykinmiron@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

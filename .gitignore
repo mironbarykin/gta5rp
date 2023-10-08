@@ -1,0 +1,22 @@
+# Ignore for Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+# Ignore for Poetry
+__pypackages__/
+poetry.lock
+.poetry/
+.env*
+.venv/
+
+# Ignore for Django
+/static/
+/media/
+*.sqlite3
+**/migrations/
+
+# Ignore for IDE
+.vscode/
+.idea/
