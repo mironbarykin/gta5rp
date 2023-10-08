@@ -2,13 +2,6 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.db import models
 
 
-class Position(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-
-
 class UserManager(BaseUserManager):
     def create_user(self, username, password, discord, signature, **extra_fields):
         if not username:
@@ -39,7 +32,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(unique=True, max_length=80)
     discord = models.CharField(max_length=120)
     signature = models.URLField(max_length=200, blank=True, null=True)
-    position = models.ForeignKey(Position, on_delete=models.SET_NULL, null=True, blank=True)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)

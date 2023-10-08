@@ -5,7 +5,7 @@ from django.contrib import messages
 
 def login_view(request):
     if request.user.is_authenticated:
-        messages.warning(request, "You are already logged in.")
+        messages.warning(request, "Вы уже вошли в аккаунт.")
         return redirect('documents')
     else:
         if request.method == 'POST':
